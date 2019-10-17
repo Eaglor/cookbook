@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <textarea aria-label="Ingredient">Ingredient</textarea>
+    <button onClick="addIngredient()">Add</button>
+    <h1 id="ingredientAdded">Your ingredient has been added</h1>
+    <script type="text/java-script">
+        function addIngredient(){
+            fetch("/addIngredient").then(function (response){
+                response.text().then(function (text){
+                    var element = document.getElementById("ingredientAdded");
+                    element.innerHTML = text;
+                 )}
+            )};
+        }
+    </script>
+
+    <textarea aria-label="Recipe">Recipy</textarea>
+    <button onclick="addRecipe()"></button>
+    <h1 id="recipeAdded">Your recipe has been added</h1>
+    <script type="text/java-script">
+        function addRecipe() {
+            fetch("/addRecipe").then(function (response){
+                response.text().then(function (text){
+                    var element = document.getElementById("recipeAdded");
+                    element.innerHTML = text;
+                 )}
+            )};
+        }
+    </script>
+</body>
+</html>
