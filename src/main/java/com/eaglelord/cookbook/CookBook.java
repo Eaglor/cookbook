@@ -1,6 +1,7 @@
 package com.eaglelord.cookbook;
 
 import jdk.jfr.FlightRecorderPermission;
+import model.Recipe;
 import model.UserInput;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,11 +13,11 @@ import java.util.ListIterator;
 
 @RestController
 public class CookBook {
-    public List<String> recipe;
+    public List<Recipe> recipe;
     private String ingredient;
 
     @RequestMapping("/addRecipe")
-    public void setRecipe(List<String> recipe) {
+    public void setRecipe(List<Recipe> recipe) {
         this.recipe = recipe;
     }
 

@@ -3,10 +3,11 @@ package model;
 public class Ingredient {
     private String name;
     private String description;
-    private String alternative;
 
-    private Ingredient ingredient(String name, Measure measure, String description, String alternative){
-
+    private Ingredient ingredient(String name, Measure measure, String description){
+        this.name = name;
+        Measure me = new Measure();
+        this.description = description;
     }
 
     public String getName() {
@@ -25,11 +26,5 @@ public class Ingredient {
         this.description = description;
     }
 
-    public String getAlternative() {
-        return alternative;
-    }
-
-    public void setAlternative(String alternative) {
-        this.alternative = alternative;
-    }
 }
+
