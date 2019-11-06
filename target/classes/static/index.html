@@ -5,28 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-    <button onclick="rollT6()">T6</button>
-    <h1 id="resultT6"></h1>
-    <script type="text/javascript">
-        function rollT6() {
-            fetch("/rollt6").then(function (response) {
-                response.text().then(function (text) {
-                    var element = document.getElementById("resultT6");
+    <textarea aria-label="Ingredient">Ingredient</textarea>
+    <button onClick="addIngredient()">Add</button>
+    <h1 id="ingredientAdded">Your ingredient has been added</h1>
+    <script type="text/java-script">
+        function addIngredient(){
+            fetch("/addIngredient").then(function (response){
+                response.text().then(function (text){
+                    var element = document.getElementById("ingredientAdded");
                     element.innerHTML = text;
-                })
-            });
+                 )}
+            )};
         }
     </script>
-    <button onclick="rollT20()">T20</button>
-    <h1 id="resultT20"></h1>
-    <script>
-    function rollT20() {
-        fetch("/rollt20").then(function (response) {
-            response.text().then(function (text) {
-                var element = document.getElementById("resultT20");
-                element.innerHTML = text;
-                })
-            });
+
+    <textarea aria-label="Recipe">Recipy</textarea>
+    <button onclick="addRecipe()"></button>
+    <h1 id="recipeAdded">Your recipe has been added</h1>
+    <script type="text/java-script">
+        function addRecipe() {
+            fetch("/addRecipe").then(function (response){
+                response.text().then(function (text){
+                    var element = document.getElementById("recipeAdded");
+                    element.innerHTML = text;
+                 )}
+            )};
         }
     </script>
 </body>

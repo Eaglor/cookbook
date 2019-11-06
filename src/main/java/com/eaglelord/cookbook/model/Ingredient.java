@@ -1,16 +1,11 @@
-package model;
+package com.eaglelord.cookbook.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Recipe {
+public class Ingredient {
     private String name;
-
     private String description;
 
-    public Recipe recipe(String name, Ingredient ingredients, String description){
+    public Ingredient(String name, String description){
         this.name = name;
-        List<Ingredient> ingred = new ArrayList<Ingredient>();
         this.description = description;
     }
 
@@ -29,4 +24,6 @@ public class Recipe {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
+
