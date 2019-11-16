@@ -19,11 +19,11 @@ public class RecipeController {
     @GetMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public List<Recipe> fetchAll() {
-        List<Recipe> recipies = new ArrayList<>();
+        List<Recipe> recipes = new ArrayList<>();
         Ingredient ingredient = new Ingredient("Onion", "Yellow onion");
         Recipe recipe = new Recipe("MeatBalls", Arrays.asList(ingredient), "Minced meat");
-        recipies.add(recipe);
-        return recipies;
+        recipes.add(recipe);
+        return recipes;
     }
 
 
